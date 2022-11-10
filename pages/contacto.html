@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html">
+            <div >
+                <img class="header__logo" src="../img/Logo_Final__1_-removebg-preview.png" width="100" alt="Logo VIP">
+            </div>
+        </a>
+        <nav class="navegacion">
+            <ul class="menu"> 
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="nosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a href="cursos.html">Cursos</a>
+                    <!--<ul class="submenu">
+                        <li a href="#">Niños</li>
+                        <li a href="#">Jovenes</li>
+                        <li a href="#">Adultos</li>
+                        <li a href="#">Examenes internacionales</li>
+                    </ul>-->
+                </li>
+                <li>
+                    <a href="beneficios.html">Beneficios</a>
+                </li>
+                <li class="contact">
+                    <a href="pages/contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2 class="contacto">Contacto</h2>
+
+        <p class="descripcion">Completa el formulario y te contactaremos a la brevedad para brindarte informacion sobre nuestros cursos.</p>
+
+
+        <form class="formulario">
+            <fieldset>
+                <legend>Tus datos:</legend>
+                    <div>
+                        <label for="nombre">Nombre y apellido:</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+
+                    <div>
+                        <label for="edad">Edad:</label>
+                        <input type="text" id="edad" required>
+                    </div>
+
+                    <div>
+                        <label for="celular">Celular:</label>
+                        <input type="text" id="celular" required>
+                    </div>
+                    
+                    <div>
+                        <p>Conocimientos previos:</p>
+                            <input type="radio" name="conocimientos" id="si">
+                            <label for="si">Si</label>
+                    
+                            <input type="radio" name="conocimientos" id="no">
+                            <label for="no">No</label>
+                    </div>
+                
+                    <div>
+                        <label for="mensaje">Dejanos tu mensaje</label>
+                        <textarea name="" id="mensaje" cols="30" rows="10" maxlength="20" placeholder="Opcional"></textarea>
+                    </div>
+
+                    <input type="submit" value="Enviar">
+            </fieldset>
+        
+        </form>
+        
+    </section>
+
+    <section>
+
+        <h2 class="ubicacion">Ubicacion</h2>
+
+        <div class="direccion">Direccion: Calle 8, esquina diagonal 1. Parque del Plata Sur. A una cuadra de la escuela 153 y del jardin 241.</div>
+
+        <div>
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11024.413074917262!2d-55.72466651650871!3d-34.76623142246438!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959ff7974bf2b645%3A0xe42e51c52fb56b2b!2sVIP%20ACADEMIA%20DE%20INGL%C3%89S!5e0!3m2!1sen!2suy!4v1665667141916!5m2!1sen!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>EXPLORAR</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/nosotros.html">Nosotros</a></li>
+                        <li><a href="pages/cursos.html">Cursos</a></li>
+                        <li><a href="pages/beneficios.html">Beneficios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>PREGUNTAS FRECUENTES</h4>
+                    <ul>
+                        <li><a href="#">Medios de pago</a></li>
+                        <li><a href="#">Vacaciones y feriados</a></li>
+                        <li><a href="#">Matricula</a></li>
+                        <li><a href="#">Descuentos por grupos familiares</a></li>
+                        <li><a href="#">Examenes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>REDES SOCIALES</h4>
+                    <div class="social-links">
+                        <a href="#"><img src="img/whatico.png" alt=""></i></a>
+                        <a href="#"><img src="img/instico.png" alt=""></i></a>
+                        <a href="#"><img src="img/faceico.png" alt=""></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; VIP | Designed by Caroline Velazquez - 2022</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
