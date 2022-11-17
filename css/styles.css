@@ -17,9 +17,12 @@ li a{
     padding: 10px;
     text-decoration: none;
 }
+img{
+    max-width: 100%;
+}
 
 body{
-    background-image: linear-gradient(to bottom, rgb(2, 150, 125), rgb(177, 255, 236))
+    background-image: linear-gradient(to bottom, rgb(107, 250, 226), rgb(241, 255, 251))
 }
 /**********************************************************/
 /******************MENU DE NAVEGACION**********************/
@@ -28,7 +31,6 @@ body{
 /*El menu de navegacion va a tener un submenu proximamente*/
 .header{
     position: sticky;
-    top: 0;
     display: flex;
     align-items: center;
     background-color: rgb(2, 150, 125);
@@ -73,6 +75,16 @@ nav{
     text-decoration: none;
     color: black;
 }
+@media screen and (max-width: 767px) {
+    .header{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+/*Veo que no me esta quedando bien el responsive del header, pero ya no se que mas probar! 
+Obviemente tengo algo mal que no estoy viendo :(  */
+
 
 /********************************************************************************
 ***********************************HERO****************************************
@@ -100,6 +112,7 @@ nav{
 
 .hero-text__vivi{
     font-size: 6rem;
+    font-weight: bolder;
 }
 
 .hero-text__agenda{
@@ -132,10 +145,22 @@ margin-top: 1.5rem;
     color: #000000;
 }
 
+.quienes{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+}
 
-/*******************************************************************
+.descripcion{
+    font-size: 1.3rem;
+    padding: 2rem;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+
+/************************************************************************
 ***************************MISION Y VISION*******************************
-***************************AUN EN PROCESO*************************/
+**********************************************************************/
 
 .about-1 {
     margin: 30px;
@@ -205,50 +230,146 @@ margin-top: 1.5rem;
 }
 
 /***********************************************************
-************************niveles*********************
+************************Nuestros cursos*************************
 ************************************************************/
-/*La idea es que cada foto este linkeada a una descripcion de cada curso, cuando lo sepa hacer*/
-.cursos{
-    margin-top: 3rem;
+.nuestroscursos{
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 3rem;
 }
-
-.cursos h2{
-    font-size: 4rem;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.niveles{
+#nuestros-cursos{
     display: flex;
-    grid-template-columns: repeat(4, 1fr);
+    
+    justify-content: space-around;
+}
+.card-img-top{
+    width: 19rem;
+    height: 20rem;
 }
 
-
-.niveles img{
-    width: 70%;
-    height: 85%;
+.card{
+    height: 35rem;
+    width: 19rem;
 }
 
-.niveles img:hover{
-    transform: scale(1.1);
+@media screen and (max-width: 1272px) {
+    #nuestros-cursos{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
 }
 
 
 /*****************************************************************************
 *******************************************NOSOTROS***************************
 ******************************************************************************/
-.nosotros{
-    text-align: center;
+#carousel{
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
 }
 
 .nosotros h2{
+    margin-bottom: 2rem;
+    font-weight: bolder;
     font-size: 2rem;
+}
+
+.nosotros{
+    text-align: center;
+    padding: 7rem;
+}
+
+
+.nosotros h3 {
+    font-weight: bolder;
+    font-size: 1.8rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
 } 
 
-/*faltaria una galeria de fotos o algo por el estilo*/
+.nosotros p{
+max-width: 50%;
+margin: 0 auto;
+font-size: 1.3rem;
+}
 
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    border: solid 1px white;
+}
+
+.grid-item:hover{
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+    padding: 20px;
+    grid-auto-flow: dense;
+}
+
+.wide{
+    grid-column: span 2;
+}
+
+.tall{
+    grid-row: span 2;
+}
+
+
+/*****************************************************************************
+***********************************CURSOS.html**************************************
+******************************************************************************/
+
+.contenedor-cursos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+    font-size: 1.3rem;
+}
+    
+.contenedor-cursos img{
+    height: 300px;
+}
+.container h2{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+@media screen and (min-width: 992px) {
+    .contenedor-cursos{
+        flex-direction: row;
+    }
+}
+
+
+
+/*********************************************************************************
+***********************PREGUNTAS FRECUENTES***************************************
+**************************sin terminar aun*************************************/
+.preguntasfrecuentes h2{
+    font-size: 3rem;
+}
+.preguntasfrecuentes{
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
 
 /******************************************************************************
 ************************CONTACTO.HTML*********************************************
@@ -272,6 +393,7 @@ margin-top: 1.5rem;
     font-size: 2rem;
     margin-bottom: 2rem;
 }
+
 h2{
     text-align: center;
     margin-bottom: 2rem;
@@ -307,104 +429,90 @@ input{
 
 .mapa{
     margin-top: 2rem;
-    width: 100%;
+    width: 80%;
     max-width: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center 
+    align-items: center; 
+    margin-bottom: 3rem;
 }
 
 .direccion{
     text-align: center;
+    padding: 2rem;
 }
+
+
 
 /***********************************************************************************
 *****************************FOOTER************************************************
-**********************************************************************************/
+************************************************************************************/
 
 
-.container{
-    max-width: 1170px;
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
+    margin-top: 3rem;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
 }
-.row{
-display: flex;
-flex-wrap: wrap;
+.pie-pagina .grupo-1 .caja figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-ul{
-    list-style: none;
+.pie-pagina .grupo-1 .caja img{
+    width: 200px;
 }
-
-.footer{
-    background-color: #000000;
-    padding: 60px 0;
-}
-
-.footer-col{
-    width: 33.3%;
-    padding: 0 50px;
-}
-
-.footer-col h4{
-font-size: 1.5rem;
-color: #fff;
-margin-bottom: 1rem;
-position: relative;
-}
-
-.footer-col h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: #004b32;
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
-}
-
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
-}
-
-.footer-col ul li a{
-    font-size: 1rem;
+.pie-pagina .grupo-1 .caja h3{
     color: #fff;
-    display: block;
-    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    font-size: 20px;
 }
-
-.footer-col ul li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
+.pie-pagina .grupo-1 .caja p{
+    color: #efefef;
+    margin-bottom: 10px;
 }
-
-.footer img{
-    height: 40px;
-    width: 40px;
-}
-
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.4s ease;
-}
-
-.footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
-}
-
-.footer-bottom{
-    color: #ffffff;
+.pie-pagina .grupo-1 .red-social img{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
     text-align: center;
-    margin-top: 4rem;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social img:hover{
+    background-color: rgb(192, 192, 192);
+}
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+        text-align: center;
+    }
 }

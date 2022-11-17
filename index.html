@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Poppins:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/Logo_Final__1_-removebg-preview.png" type="image/x-icon">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--animaciones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!--mi css-->
     <link rel="stylesheet" href="css/styles.css">
     <title>Academia de ingles VIP</title>
 </head>
@@ -20,6 +25,8 @@
                 <img class="header__logo" src="img/Logo_Final__1_-removebg-preview.png" width="100" alt="Logo VIP">
             </div>
         </a>
+
+        
         <nav class="navegacion">
             <ul class="menu"> 
                 <li>
@@ -30,32 +37,47 @@
                 </li>
                 <li>
                     <a href="pages/cursos.html">Cursos</a>
-                    <!--<ul class="submenu">
-                        <li a href="#">Niños</li>
-                        <li a href="#">Jovenes</li>
-                        <li a href="#">Adultos</li>
-                        <li a href="#">Examenes internacionales</li>
-                    </ul>-->
+                <!--PROXIMAMENTE SUBMENU
+                        <ul class="submenu">
+                            <li a href="#">Niños</li>
+                            <li a href="#">Jovenes</li>
+                            <li a href="#">Adultos</li>
+                            <li a href="#">Examenes internacionales</li>
+                        </ul>-->
                 </li>
                 <li>
-                    <a href="pages/beneficios.html">Beneficios</a>
+                    <a href="pages/faq.html">Preguntas frecuentes</a>
                 </li>
                 <li class="contact">
                     <a href="pages/contacto.html">Contacto</a>
                 </li>
             </ul>
         </nav>
+    
     </header>
 
     <div class="hero-image">
         <div class="hero-text">
-            <h1 class="hero-text__vivi">Vivi tu experiencia VIP</h1>
-            <p class="hero-text__agenda">Agenda una entrevista y asegura tu lugar</p>
+            <h1 class="hero-text__vivi animate__animated animate__pulse">Academia de ingles VIP</h1>
+            <p class="hero-text__agenda">Educacion de calidad</p>
             <button  class="bot-contact">
                 <a  href="pages/contacto.html">Contacto</a>
             </button>
         </div>
     </div>
+
+    <section>
+        <div>
+            <h2 class="quienes">
+                ¿Quienes somos?
+            </h2>
+                <p class="descripcion">
+                    Somos una academia dedicada a la enseñanza del idioma ingles, ubicada en el corazon de Parque del Plata.
+                    Buscamos que nuestros alumnos disfruten del proceso de aprendizaje, que se de de forma activa, estimulando la curiosidad de los niños en sus primeras etapas, logrando asi excelentes resultados en los años posteriores.
+                    
+                </p>
+        </div>
+    </section>
 
     <section id="about-1">
         <div class="content-box-lg">
@@ -90,59 +112,77 @@
         </div>  
     </section>
 
-    <section class="cursos">
-        <h2>Nuestros cursos</h2>
-            <div class="niveles">
-                <a href="pages/cursos.html">
-                    <img src="img/niños.png" alt="niños">
-                </a>
-                <a href="http://">
-                    <img src="img/jovenes.png" alt="teens">
-                </a>
-                <a href="http://">
-                    <img src="img/adultos.png" alt="adultos">
-                </a>
-                <a href="http://">
-                <img src="img/internacionales.png" alt="internacionales">
-                </a>
-            </div>
-    </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>EXPLORAR</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/nosotros.html">Nosotros</a></li>
-                        <li><a href="pages/cursos.html">Cursos</a></li>
-                        <li><a href="pages/beneficios.html">Beneficios</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>PREGUNTAS FRECUENTES</h4>
-                    <ul>
-                        <li><a href="#">Medios de pago</a></li>
-                        <li><a href="#">Vacaciones y feriados</a></li>
-                        <li><a href="#">Matricula</a></li>
-                        <li><a href="#">Descuentos por grupos familiares</a></li>
-                        <li><a href="#">Examenes</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>REDES SOCIALES</h4>
-                    <div class="social-links">
-                        <a href="#"><img src="img/whatico.png" alt=""></i></a>
-                        <a href="#"><img src="img/instico.png" alt=""></i></a>
-                        <a href="#"><img src="img/faceico.png" alt=""></i></a>
-                    </div>
-                </div>
+    <h2 class="nuestroscursos">Nuestros cursos</h2>
+
+<section id="nuestros-cursos"> 
+    <div class="card">
+        <img src="img/niños.jpg" class="card-img-top" alt="Cursos niños">
+            <div class="card-body">
+                <h4 class="card-title">Niños</h4>
+                <p class="card-text">Nuestros cursos comienzan desde los 4 años.</p>
+                <a href="pages/cursos.html" class="btn btn-primary">Mas informacion</a>
+            </div>
+    </div>
+
+    <div class="card">
+        <img src="img/adolescentes.jpg" class="card-img-top" alt="Cursos jovenes">
+            <div class="card-body">
+                <h4 class="card-title">Jovenes</h4>
+                <p class="card-text">Cursos planificados en base a las necesidades de los adolescentes.</p>
+                <a href="pages/cursos.html" class="btn btn-primary">Mas informacion</a>
+            </div>
+    </div>
+
+    <div class="card">
+        <img src="img/dultos.jpg" class="card-img-top" alt="Cursos adultos">
+            <div class="card-body">
+                <h4 class="card-title">Adultos</h4>
+                <p class="card-text">Cursos desde cero o para retomar estudios anteriores.</p>
+                <a href="pages/cursos.html" class="btn btn-primary">Mas informacion</a>
+            </div>
+    </div>
+
+    <div class="card">
+        <img src="img/int.png" class="card-img-top" alt="Examenes internacionales">
+            <div class="card-body">
+                <h4 class="card-title">Examenes Internacionales</h4>
+                <p class="card-text">Somos centro oficial de preparacion de examenes internacionales de la universidad de Cambridge.</p>
+                <a href="pages/cursos.html" class="btn btn-primary">Mas informacion</a>
+            </div>
+    </div>
+</section>      
+
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="caja">
+            <figure>
+                <a href="index.html">
+                    <img src="img/Logo_Final__1_-removebg-preview.png" alt="Logo de SLee Dw">
+                </a>
+            </figure>
+        </div>
+        <div class="caja">
+            <h3>DIRECCION</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+        </div>
+        <div class="caja">
+            <h3>SIGUENOS</h3>
+            <div class="red-social">
+                <img src="img/faceico.png" alt="">
+                <img src="img/instico.png" alt="">
+                <img src="img/whatico.png" alt="">
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; VIP | Designed by Caroline Velazquez - 2022</p>
-        </div>
-    </footer>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2022 | Designed by Caroline Velazquez.</small>
+    </div>
+</footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script><script>new WOW().init();</script>
 </body>
 </html>
